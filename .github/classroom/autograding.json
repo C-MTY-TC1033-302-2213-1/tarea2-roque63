@@ -2,7 +2,7 @@
   "tests": [
     {
      "name": "Test 1 -",
-     "setup": "g++ -g -o main main.cpp Video.cpp, Serie.cpp, Pelicula.cpp, Episodio.cpp",
+     "setup": "g++ -g -o main main.cpp Video.cpp Serie.cpp Pelicula.cpp Episodio.cpp",
      "run": "./main",
      "input": "1",
      "output": "Comedia\n200\n",
@@ -12,7 +12,7 @@
    },
    {
      "name": "Test 2 -",
-     "setup": "g++ -g -o main main.cpp Video.cpp, Serie.cpp, Pelicula.cpp, Episodio.cpp",
+     "setup": "g++ -g -o main main.cpp Video.cpp Serie.cpp Pelicula.cpp Episodio.cpp",
      "run": "./main",
      "input": "2",
      "output": "9.5\nTigres_Rayados 132 100\nTigres_Campeones 132 100\n",
@@ -22,17 +22,17 @@
    },
    {
      "name": "Test 3 -",
-     "setup": "g++ -g -o main main.cpp Video.cpp, Serie.cpp, Pelicula.cpp, Episodio.cpp",
+     "setup": "g++ -g -o main main.cpp Video.cpp Serie.cpp Pelicula.cpp Episodio.cpp",
      "run": "./main",
      "input": "3",
-     "output": "0000 Chihuahua 200 Comedia 9.500000 2\nTigres_Rayados 132 100\nTigres_Campeones 132 100\n",
+     "output": "0000 Chihuahua 200 Comedia 9.500000 2\nTigres_Rayados 132 100\nTigres_Campeones 132 100\n\n",
      "comparison": "included",
      "timeout": 2,
      "points": 25
    },
  {
      "name": "Test 4 -",
-     "setup": "g++ -g -o main main.cpp Video.cpp, Serie.cpp, Pelicula.cpp, Episodio.cpp",
+     "setup": "g++ -g -o main main.cpp Video.cpp Serie.cpp Pelicula.cpp Episodio.cpp",
      "run": "./main",
      "input": "4",
      "output": "Video = 0000 TC1030 10 Computación 100.000000\nEpisodio = Tigres_Rayados 132 100\nPelicula = 0000 TC1030 10 Computación 100.000000 100\n",

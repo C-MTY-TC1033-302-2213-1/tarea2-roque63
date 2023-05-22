@@ -14,10 +14,10 @@
 //
 
 #include <iostream>
-#include "Video.hpp"
-#include "Episodio.hpp"
-#include "Pelicula.hpp"
-#include "Serie.hpp"
+#include "Video.h"
+#include "Episodio.h"
+#include "Pelicula.h"
+#include "Serie.h"
 int main() {
     // Declaracion de objetos
     Video viernes;
@@ -39,15 +39,15 @@ int main() {
     switch (opcion){
         case 1:
             cout << serie1.getGenero() << endl;
-            cout << serie1.getDuracion()<< endl;
+            cout << serie1.getDuracion() << endl;
             break;
         case 2:
-            cout << serie1.getCalificacion()<< endl;
-            cout << serie1.getEpisodio(0).str()<< endl;
-            cout << serie1.getEpisodio(1).str()<< endl;
+            cout << serie1.getCalificacion() << endl;
+            cout << serie1.getEpisodio(0).str() << endl;
+            cout << serie1.getEpisodio(1).str() << endl;
             break;
         case 3:
-            cout << serie1.str() << endl<< endl;
+            cout << serie1.str() << endl;
             break;
         case 4:
             cout << "Video = " << viernes.str() << endl;
