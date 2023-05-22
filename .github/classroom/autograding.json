@@ -1,0 +1,15 @@
+{
+  "tests": [
+    {
+      "name": "Test 1 -",
+      "setup": "g++ -g -o main main.cpp Punto.cpp Triangulo.cpp",
+      "run": "./main",
+      "input": "",
+      "output": "p_tri1 = 22.3734\na_tri1 = 21.5\np_tri2 = 28.5422\na_tri2 = 39\np_tri3 = 10.4721\na_tri3 = 4\nDistancia = 10\n",
+      "comparison": "included",
+      "timeout": 2,
+      "points": 100
+    }
+  ]
+}
+
