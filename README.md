@@ -1,4 +1,6 @@
-# Clase Triangulo con composición con la clase Punto
+# Clases Base - Video
+# Clase composición - Episodio
+# Clases Derivadas - Pelicula, Serie (con composicion)
 
 <img alt="points bar" align="right" height="36" src="../../blob/status/.github/activity-icons/points-bar.svg" />
 
@@ -6,51 +8,95 @@
 ```c++
 //
 //  main.cpp
-//  ComposicionTriangulo
+//  Tarea2
 //
-//  Created by Ma. Guadalupe Roque Díaz de León on 18/05/23.
+//  Created by Ma. Guadalupe Roque Díaz de León on 19/05/23.
 //
 
 #include <iostream>
-#include <iomanip> // for std::setprecision()
-#include "Punto.hpp"
-#include "Triangulo.hpp"
+#include "Video.hpp"
+#include "Episodio.hpp"
+#include "Pelicula.hpp"
+#include "Serie.hpp"
+int main() {
+    // Declaracion de objetos
+    Video viernes;
+    Episodio episodio_viernes{"Tigres_Rayados", 132, 100};
+    Episodio episodio_sabado{"Tigres_Campeones", 132, 100};
+    Pelicula peli;
+    Serie serie1;
+    int opcion;
 
-using namespace std;
-int main( ){
-    Punto p1{-5, -5}, p2{1, 3}, p3{4, -6};
-    Punto p4{-2, -3}, p5{5, -4}, p6{-1,3};
-    Punto p7{6, 7}, p8{6, 3}, p9{8,3};
-    Triangulo tri1{p4,p5,p6}, tri2{p1, p2, p3}, tri3{p7, p8, p9};
-    
-    cout << "p_tri1 = " << tri1.perimetro() << endl;
-    cout << "a_tri1 = " << tri1.area() << endl;
-    cout << "p_tri2 = " << tri2.perimetro() << endl;
-    cout << "a_tri2 = " << tri2.area() << endl;
-    cout << "p_tri3 = " << tri3.perimetro() << endl;
-    cout << "a_tri3 = " << tri3.area() << endl;
-    cout << "Distancia = " << p1.calculaDistancia(p2)  << endl;
-   
+    serie1.setNombre("Chihuahua");
+    serie1.setDuracion(200);
+    serie1.setGenero("Comedia");
+    serie1.setCalificacion(9.5);
+    serie1.agregaEpisodio(episodio_viernes);
+    serie1.agregaEpisodio(episodio_sabado);
+
+    cin >> opcion;
+
+    switch (opcion){
+        case 1:
+            cout << serie1.getGenero() << endl;
+            cout << serie1.getDuracion()<< endl;
+            break;
+        case 2:
+            cout << serie1.getCalificacion()<< endl;
+            cout << serie1.getEpisodio(0).str()<< endl;
+            cout << serie1.getEpisodio(1).str()<< endl;
+            break;
+        case 3:
+            cout << serie1.str() << endl<< endl;
+            break;
+        case 4:
+            cout << "Video = " << viernes.str() << endl;
+            cout << "Episodio = " << episodio_viernes.str() << endl;
+            cout << "Pelicula = " << peli.str() << endl;
+            break;
+        default:
+            cout << "incorrecta" ;
+    }
+
     return 0;
 }
 
+
 ```
-# CASO DE PRUEBA
+# CASOS DE PRUEBA
 ```c++
 /* Casos de Prueba
 //  
 Datos de entrada:
-Ninguno
+1
 
 Datos de salida:
+Comedia
+200
 
-p_tri1 = 22.3734
-a_tri1 = 21.5
-p_tri2 = 28.5422
-a_tri2 = 39
-p_tri3 = 10.4721
-a_tri3 = 4
-Distancia = 10
+Datos de entrada:
+2
+
+Datos de salida:
+9.5
+Tigres_Rayados 132 100
+Tigres_Campeones 132 100
+
+Datos de entrada:
+3
+
+Datos de salida:
+0000 Chihuahua 200 Comedia 9.500000 2
+Tigres_Rayados 132 100
+Tigres_Campeones 132 100
+
+Datos de entrada:
+4
+
+Datos de salida:
+Video = 0000 TC1030 10 Computación 100.000000
+Episodio = Tigres_Rayados 132 100
+Pelicula = 0000 TC1030 10 Computación 100.000000 100
 
 ```
 
