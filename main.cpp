@@ -10,10 +10,10 @@
 // Clase usada para composición - Episodio
 
 #include <iostream>
-#include "Video.hpp"
-#include "Episodio.hpp"
-#include "Pelicula.hpp"
-#include "Serie.hpp"
+#include "Video.h"
+#include "Episodio.h"
+#include "Pelicula.h"
+#include "Serie.h"
 int main() {
     // Declaracion de objetos
     Video viernes;
